@@ -3,7 +3,7 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-SRC_URI = "http://www.et-view.com/data/enigma2-plugin-systemplugins-blindscan_2011-04-15_mipsel.ipk"
+SRC_URI = "http://www.xtrendet.net/enigma2-plugin-systemplugins-blindscan_2012-02-14_mipsel.zip"
 
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
