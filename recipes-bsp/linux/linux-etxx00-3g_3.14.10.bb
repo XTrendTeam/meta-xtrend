@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "1134cb446e1671e5627f3afeea8dc05b5e79ec26c476abd0d20b41c13a
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-MACHINE_KERNEL_PR_append = ".3"
+MACHINE_KERNEL_PR_append = ".4"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
@@ -24,6 +24,17 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://xtrendet.net/xtrend-linux-${PV}-${SRCDATE}.tar.gz \
 	file://defconfig \
+	file://add-dmx-source-timecode.patch \
+	file://af9015-output-full-range-SNR.patch \
+	file://af9033-output-full-range-SNR.patch \
+	file://cxd2820r-output-full-range-SNR.patch \
+	file://dvb-usb-dib0700-disable-sleep.patch \
+	file://fix-proc-cputype.patch \
+	file://iosched-slice_idle-1.patch \
+	file://it913x-switch-off-PID-filter-by-default.patch \
+	file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
+	file://tda18271-advertise-supported-delsys.patch \
+	file://timedate.patch \
 	"
 
 S = "${WORKDIR}/linux-${PV}"
