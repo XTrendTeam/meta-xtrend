@@ -3,7 +3,7 @@ SRCDATE = "20140624"
 
 require et-dvb-modules.inc
 
-SRC_URI = "http://xtrendet.com/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
+SRC_URI = "http://www.xtrendet.net/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
 
 SRC_URI[md5sum] = "5e3bb901c959a28e416d4cb1c222e063"
 
