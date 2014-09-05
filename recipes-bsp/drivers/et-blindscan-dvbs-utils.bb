@@ -9,7 +9,7 @@ PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
 PV = "1.0"
-PR = "r2"
+PR = "r3"
 
 S = "${WORKDIR}"
 
@@ -24,4 +24,4 @@ do_install() {
 INHIBIT_PACKAGE_STRIP = "1"
 
 SRC_URI[md5sum] = "537af67e2fb6bac63352ecb39f4b24ed"
-SRC_URI[sha256sum] = "20339a4cf77237b515b667afb59aea1fccf1d768ef9f0daf6c8901361a3d5bb6"
+SRC_URI[sha256sum] = "d42b97994f0f82b3d1c98378c6e59faf6d04760d83027eab7b089342da6d878b"
