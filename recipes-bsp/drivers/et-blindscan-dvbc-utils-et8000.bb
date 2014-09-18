@@ -10,8 +10,8 @@ SRC_URI = "http://xtrendet.net/${MACHINE}-dvbc-blindscan-${PV}.zip"
 PROVIDES += "virtual/blindscan-dvbc"
 RPROVIDES_${PN} += "virtual/blindscan-dvbc"
 
-PV = "1.0"
-PR = "r1"
+PV = "1.2"
+PR = "r2"
 
 S = "${WORKDIR}"
 
