@@ -9,7 +9,7 @@ PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
 PV = "1.0"
-PR = "r2"
+PR = "r4"
 
 S = "${WORKDIR}"
 
