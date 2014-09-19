@@ -2,6 +2,8 @@ require conf/machine/include/et.inc
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-etxx00-2g"
 
+PREFERRED_PROVIDER_virtual/blindscan-dvbc = "et-blindscan-dvbc-utils-${MACHINE}"
+
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 8192"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
