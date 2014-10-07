@@ -3,13 +3,13 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-SRC_URI = "http://www.xtrendet.net/enigma2-plugin-systemplugins-blindscan_2012-02-14_mipsel.zip"
+SRC_URI = "http://www.xtrendet.net/enigma2-plugin-systemplugins-blindscan_1.4_mipsel.zip"
 
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
 PV = "1.0"
-PR = "r4"
+PR = "r5"
 
 S = "${WORKDIR}"
 
@@ -23,5 +23,5 @@ do_install() {
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-SRC_URI[md5sum] = "19abe3fcaf21ff22ea2e78a4fe6c3026"
-SRC_URI[sha256sum] = "20339a4cf77237b515b667afb59aea1fccf1d768ef9f0daf6c8901361a3d5bb6"
+SRC_URI[md5sum] = "50E866CD0E33825260442BA39212F0EA"
+SRC_URI[sha256sum] = "F854A6924E932615DD76716B94FD80221EE35382CECC630A063D5F4F5DB36A80"
