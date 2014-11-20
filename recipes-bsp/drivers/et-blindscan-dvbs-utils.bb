@@ -9,7 +9,7 @@ PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
 PV = "1.0"
-PR = "r6"
+PR = "r7"
 
 S = "${WORKDIR}"
 
@@ -17,14 +17,9 @@ do_compile() {
 }
 
 do_install() {
-}
-
-do_deploy() {
-    install -d 0755 ${DEPLOY_DIR_IPK}/${MACHINE}
+    install -m 0755 -d ${DEPLOY_DIR_IPK}/${MACHINE}
     install -m 0644 enigma2-plugin-systemplugins-blindscan_1.4_mipsel.ipk ${DEPLOY_DIR_IPK}/${MACHINE}
 }
-
-addtask do_deploy before do_package_write after do_package_write_ipk
 
 INHIBIT_PACKAGE_STRIP = "1"
 
