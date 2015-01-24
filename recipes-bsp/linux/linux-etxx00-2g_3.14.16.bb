@@ -35,9 +35,9 @@ SRC_URI += "http://xtrendet.net/linux-${PV}.tar.gz \
 	file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
 	"
 
-S = "${WORKDIR}/linux-${PV}"
-
 inherit kernel machine_kernel_pr
+
+S = "${WORKDIR}/linux-${PV}"
 
 export OS = "Linux"
 KERNEL_OBJECT_SUFFIX = "ko"
@@ -46,11 +46,6 @@ KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
-
-do_configure_prepend() {
-	oe_machinstall -m 0644 ${WORKDIR}/defconfig ${S}/.config
-	oe_runmake oldconfig
-}
 
 kernel_do_install_append() {
 	${STRIP} ${D}${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
