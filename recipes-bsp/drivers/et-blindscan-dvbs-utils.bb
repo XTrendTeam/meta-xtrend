@@ -5,11 +5,13 @@ LICENSE = "CLOSED"
 
 SRC_URI = "http://www.xtrendet.net/et-dvbs-blindscan-${PV}.zip"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 PROVIDES += "virtual/blindscan-dvbs"
 RPROVIDES_${PN} += "virtual/blindscan-dvbs"
 
 PV = "1.1"
-PR = "r8"
+PR = "r9"
 
 S = "${WORKDIR}"
 
