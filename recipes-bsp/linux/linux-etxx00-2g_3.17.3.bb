@@ -2,12 +2,12 @@ DESCRIPTION = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 
-COMPATIBLE_MACHINE = "et[4]+"
+COMPATIBLE_MACHINE = "et[8,1]+"
 
-KERNEL_RELEASE = "3.14.16"
+KERNEL_RELEASE = "3.17.3"
 
-SRC_URI[md5sum] = "b8aa9ea0c4bc10db40549997c5d7e84d"
-SRC_URI[sha256sum] = "364da9db34c3fe4d50536e046aa3a6d89cdc5bdc68a636a52dc21e40b89687cb"
+SRC_URI[md5sum] = "b0fd34ad64658bf6797c41cca2c7385f"
+SRC_URI[sha256sum] = "48899fd56b99c34fe6175e3de563138384eec3cad0a03387cec919bd8bd50157"
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
@@ -30,7 +30,6 @@ SRC_URI += "http://xtrendet.net/linux-${PV}.tar.gz \
 	file://dvb-usb-dib0700-disable-sleep.patch \
 	file://dvb_usb_disable_rc_polling.patch \
 	file://iosched-slice_idle-1.patch \
-	file://it913x-switch-off-PID-filter-by-default.patch \
 	file://tda18271-advertise-supported-delsys.patch \
 	file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
 	"
