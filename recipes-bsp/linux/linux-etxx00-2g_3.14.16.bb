@@ -27,7 +27,7 @@ SRC_URI += "http://xtrendet.net/linux-${PV}.tar.gz \
 	file://af9015-output-full-range-SNR.patch \
 	file://af9033-output-full-range-SNR.patch \
 	file://cxd2820r-output-full-range-SNR.patch \
-	file://dvb-usb-dib0700-disable-sleep.patch \
+	file://dvb-usb-dib0700-disable-sleep_3_14_16.patch \
 	file://dvb_usb_disable_rc_polling.patch \
 	file://iosched-slice_idle-1.patch \
 	file://it913x-switch-off-PID-filter-by-default.patch \
