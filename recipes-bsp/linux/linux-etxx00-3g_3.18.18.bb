@@ -4,11 +4,11 @@ LICENSE = "GPLv2"
 
 COMPATIBLE_MACHINE = "et[7,3,8]+"
 
-KERNEL_RELEASE = "3.14.21"
-SRCDATE = "20141009"
+KERNEL_RELEASE = "3.18.18"
+SRCDATE = "20150812"
 
-SRC_URI[md5sum] = "02cfdc2aa853d934f2289e28fe8e6bd2"
-SRC_URI[sha256sum] = "d524b16ce7fe3a5bd83b0c20d11a3afb389866166270b5822ad285e2f62ff1e4"
+SRC_URI[md5sum] = "9b0a98d2ce3f64769d56311bfac4432a"
+SRC_URI[sha256sum] = "eb8736304a4ad5f3518ba4db07c01251238caa454f0e16a80b28d4de4374d8f9"
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
@@ -26,15 +26,11 @@ SRC_URI += "http://xtrendet.net/xtrend-linux-${PV}-${SRCDATE}.tar.gz \
 	file://defconfig \
 	file://add-dmx-source-timecode.patch \
 	file://af9015-output-full-range-SNR.patch \
-	file://af9033-output-full-range-SNR.patch \
 	file://cxd2820r-output-full-range-SNR.patch \
-	file://dvb-usb-dib0700-disable-sleep.patch \
 	file://fix-proc-cputype.patch \
 	file://iosched-slice_idle-1.patch \
-	file://it913x-switch-off-PID-filter-by-default.patch \
 	file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
 	file://tda18271-advertise-supported-delsys.patch \
-	file://timedate.patch \
 	"
 
 inherit kernel machine_kernel_pr
