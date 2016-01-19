@@ -33,6 +33,7 @@ SRC_URI += "http://xtrendet.net/linux-${PV}.tar.gz \
 	file://tda18271-advertise-supported-delsys.patch \
 	file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
 	file://MIPS-Fix-build-with-binutils-2_24_51.patch \
+	file://bcmgenet_phyaddr.patch \
 	"
 
 inherit kernel machine_kernel_pr
