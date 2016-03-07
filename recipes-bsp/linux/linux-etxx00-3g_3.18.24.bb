@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "ef2dbd871ae67ca9dafeedd21668338b9bc929258f67867bef8efdf9b0
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-MACHINE_KERNEL_PR_append = ".8"
+MACHINE_KERNEL_PR_append = ".9"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
@@ -31,6 +31,9 @@ SRC_URI += "http://xtrendet.net/xtrend-linux-${PV}-${SRCDATE}.tar.gz \
 	file://iosched-slice_idle-1.patch \
 	file://mxl5007t-add-no_probe-and-no_reset-parameters.patch \
 	file://tda18271-advertise-supported-delsys.patch \
+	file://0001-Support-TBS-USB-drivers.patch \
+	file://0002-STV-Add-PLS-support.patch \
+	file://0003-STV-Add-SNR-Signal-report-parameters.patch \
 	"
 
 inherit kernel machine_kernel_pr
