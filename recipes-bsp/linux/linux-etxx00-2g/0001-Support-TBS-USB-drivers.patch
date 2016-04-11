@@ -164,10 +164,10 @@ diff --git a/drivers/media/dvb-frontends/stv090x.h b/drivers/media/dvb-frontends
 index 0bd6adc..7842487 100644
 --- a/drivers/media/dvb-frontends/stv090x.h
 +++ b/drivers/media/dvb-frontends/stv090x.h
-@@ -101,6 +101,9 @@ struct stv090x_config {
- 	int (*tuner_set_refclk)  (struct dvb_frontend *fe, u32 refclk);
- 	int (*tuner_get_status) (struct dvb_frontend *fe, u32 *status);
- 	void (*tuner_i2c_lock) (struct dvb_frontend *fe, int lock);
+@@ -105,6 +105,9 @@ struct stv090x_config {
+ 	/* dir = 0 -> output, dir = 1 -> input/open-drain */
+ 	int (*set_gpio)(struct dvb_frontend *fe, u8 gpio, u8 dir, u8 value,
+ 			u8 xor_value);
 +
 +	/* Hook for Lock LED */
 +	void (*set_lock_led)(struct dvb_frontend *fe, int offon);
