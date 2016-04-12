@@ -30,6 +30,7 @@ SRC_URI += "http://xtrendet.net/linux-${PV}.tar.gz \
 	file://0002-STV-Add-PLS-support.patch \
 	file://0003-STV-Add-SNR-Signal-report-parameters.patch \
 	file://0001-stv090x-optimized-TS-sync-control.patch \
+	file://0001-bcmgenet.patch \
 	"
 
 inherit kernel machine_kernel_pr
