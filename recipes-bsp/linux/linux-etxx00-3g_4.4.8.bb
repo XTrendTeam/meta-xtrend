@@ -12,7 +12,7 @@ SRC_URI[sha256sum] = "c7a7611013e04c92ef5b444d6fdfcc5964146aedc5becc258084f0ebfb
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-MACHINE_KERNEL_PR_append = ".0"
+MACHINE_KERNEL_PR_append = ".1"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
@@ -27,6 +27,11 @@ SRC_URI += "http://xtrendet.net/xtrend-linux-${PV}.tar.gz \
 	file://add-dmx-source-timecode.patch \
 	file://fix-proc-cputype.patch \
 	file://iosched-slice_idle-1.patch \
+	file://0001-Support-TBS-USB-drivers-for-4.3-kernel.patch \
+	file://0001-TBS-fixes-for-4.3-kernel.patch \
+	file://0001-STV-Add-PLS-support.patch \
+	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+	file://blindscan2.patch \
 	"
 
 inherit kernel machine_kernel_pr
