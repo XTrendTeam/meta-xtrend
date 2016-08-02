@@ -33,6 +33,7 @@ SRC_URI += "http://xtrendet.net/linux-${PV}.tar.gz \
 	file://0001-bcmgenet.patch \
 	file://2-2-stv090x-on-tuning-lock-return-correct-tuned-paramaters-like-freq-sr-fec-rolloff-etc.patch \
 	file://bcmgenet_phyaddr.patch \
+	file://kernel-gcc6.patch \
 	"
 
 inherit kernel machine_kernel_pr
