@@ -29,6 +29,7 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbc = "et-blindscan-dvbc-utils-${MACHINE}"
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
+KERNEL_OUTPUT_DIR = "."
 #KERNEL_CONSOLE = "null"
 
 IMAGE_FSTYPES ?= "ubi"
