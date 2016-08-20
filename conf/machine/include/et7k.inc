@@ -29,6 +29,7 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbc = "et-blindscan-dvbc-utils-${MACHINE}"
 
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
+KERNEL_OUTPUT_DIR = "."
 #KERNEL_CONSOLE = "null"
 
 IMAGE_FSTYPES ?= "ubi"
@@ -39,11 +40,14 @@ UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 IMAGEDIR ?= "${MACHINE}"
 
+IMAGEVERSION := "${DISTRO_NAME}-${DISTRO_VERSION}-${DATE}"
+IMAGEVERSION[vardepsexclude] = "DATE"
+
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}; \
 	cp ${DEPLOY_DIR_IMAGE}/${IMAGE_NAME}.rootfs.ubi ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/rootfs.bin; \
 	gzip -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/kernel.bin; \
-	echo ${DISTRO_NAME}-${DISTRO_VERSION}-${DATE} > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion; \
+	echo "${IMAGEVERSION}" > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion; \
 	echo "rename this file to 'force' to force an update without confirmation" > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/noforce; \
 	cd ${DEPLOY_DIR_IMAGE}; \
 	zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}_usb.zip ${IMAGEDIR}/*; \

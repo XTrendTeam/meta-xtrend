@@ -24,6 +24,7 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 SRC_URI += "http://www.xtrendet.net/linux-${PV}.tar.gz \
 	file://defconfig \
 	file://0001-kernel-add-support-for-gcc-5.patch \
+	file://kernel-gcc6.patch \
 	file://0001-Revert-default-authentication-needs-to-be-at-least-n.patch \
 	file://0001-Revert-MIPS-mm-Add-compound-tail-page-_mapcount-when.patch \
 	file://0001-Revert-MIPS-Add-fast-get_user_pages.patch \
