@@ -22,7 +22,7 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://xtrendet.net/xtrend-linux-${PV}.tar.gz \
+SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/xtrend-linux-${PV}.tar.gz \
 	file://defconfig \
 	file://add-dmx-source-timecode.patch \
 	file://fix-proc-cputype.patch \
