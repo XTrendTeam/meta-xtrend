@@ -6,9 +6,10 @@ COMPATIBLE_MACHINE = "et[7,8]+"
 
 KERNEL_RELEASE = "4.4.8"
 SRCDATE = "20160504"
+PV = ${KERNEL_RELEASE}
 
-SRC_URI[md5sum] = "fcdca2aad5d7bcbd62fbd7b26b6833df"
-SRC_URI[sha256sum] = "c7a7611013e04c92ef5b444d6fdfcc5964146aedc5becc258084f0ebfbd84623"
+SRC_URI[md5sum] = "8b67a95176111385270ed3276436193a"
+SRC_URI[sha256sum] = "571438a1c94f5a72903b310682a344757cbf97028e1e5dfbe980472f04a4e9a2"
 
 LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}/COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
@@ -22,7 +23,7 @@ PKG_kernel-image = "kernel-image"
 RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/xtrend-linux-${PV}.tar.xz \
+SRC_URI += "http://www.et-view.com/img_up/shop_pds/bh190/Img_Xtrend/xtrend-linux-${PV}-${SRCDATE}.tar.xz \
 	file://defconfig \
 	file://add-dmx-source-timecode.patch \
 	file://fix-proc-cputype.patch \
